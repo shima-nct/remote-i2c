@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="remote-i2c",
-    version="0.0.5",
+    version="0.0.6",
     author="Daniel 'Vector' Kerr",
     author_email="vector@vector.id.au",
     description="A client and server for I2C control over TCP",

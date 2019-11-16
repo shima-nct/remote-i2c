@@ -99,7 +99,7 @@ class RemoteI2CClient:
         :param force: Unused - here for compatibility with other libraries
         :return: List of bytes
         """
-        self._server.sendall(bytes([Commands.ReadWordData, i2c_addr, register, length]))
+        self._server.sendall(bytes([Commands.ReadI2CBlockData, i2c_addr, register, length]))
         value = self._server.recv(length)
         return value
     
@@ -112,6 +112,6 @@ class RemoteI2CClient:
         :param data: List of bytes
         :param force: Unused - here for compatibility with other libraries
         """
-        self._server.sendall(bytes([Commands.WriteWordData, i2c_addr, register, len(data)]))
+        self._server.sendall(bytes([Commands.WriteI2CBlockData, i2c_addr, register, len(data)]))
         self._server.sendall(bytes(data))
     
