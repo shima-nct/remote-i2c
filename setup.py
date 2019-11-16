@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="vectoridau",
+    name="remote-i2c",
     version="0.0.1",
     author="Daniel 'Vector' Kerr",
     author_email="vector@vector.id.au",
