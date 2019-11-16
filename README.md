@@ -42,7 +42,7 @@ pip install remote-i2c
 1. Ensure that the user you're operating under has permission to access the I2C hardware! (e.g., part of the i2c group)
 1. Run the remote-i2c module directly with the python interpreter from the command line:
     ```bash
-    python3 -m remote-i2c
+    python3 -m remote_i2c
     ```
 1. Alternatively, run the module from a python script:
     ```python
