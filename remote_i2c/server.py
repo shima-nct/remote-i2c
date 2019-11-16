@@ -57,11 +57,11 @@ class RemoteI2CServer:
     def _read_word_data(self, bus, client):
         addr, register = client.recv(2)
         value = bus.read_word_data(addr, register)
-        return struct.pack('>h', value)
+        return struct.pack('>H', value)
 
     def _write_word_data(self, bus, client):
         addr, register = client.recv(2)
-        value = struct.unpack('>h', *client.recv(2))[0]
+        value = struct.unpack('>H', *client.recv(2))[0]
         bus.write_word_data(addr, register, value)
     
     def _read_i2c_block_data(self, bus, client):

@@ -75,7 +75,7 @@ class RemoteI2CClient:
         """
         self._server.sendall(bytes([Commands.ReadWordData, i2c_addr, register]))
         value = self._server.recv(2)
-        return struct.unpack('>h', value)[0]
+        return struct.unpack('>H', value)[0]
     
     def write_word_data(self, i2c_addr: int, register: int, value: int, force:bool=None) -> None:
         """
@@ -87,7 +87,7 @@ class RemoteI2CClient:
         :param force: Unused - here for compatibility with other libraries
         """
         self._server.sendall(bytes([Commands.WriteWordData, i2c_addr, register]))
-        self._server.sendall(struct.pack('>h', value))
+        self._server.sendall(struct.pack('>H', value))
     
     def read_i2c_block_data(self, i2c_addr: int, register: int, length: int, force:bool=None) -> int:
         """
