@@ -43,7 +43,7 @@ class RemoteI2CServer:
 
     def _write_byte(self, bus, client):
         addr, value = client.recv(2)
-        bus.write_byte(addr, data)
+        bus.write_byte(addr, value)
     
     def _read_byte_data(self, bus, client):
         addr, register = client.recv(2)
