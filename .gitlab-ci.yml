@@ -5,7 +5,7 @@ publish_pypi:
   stage: publish
   only:
   - tags
-  image: python:3.7-alpine
+  image: python:3.7
   variables:
     TWINE_USERNAME: $LIVE_PYPI_USERNAME
     TWINE_PASSWORD: $LIVE_PYPI_PASSWORD
