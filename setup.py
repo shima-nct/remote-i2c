@@ -13,6 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://gitlab.com/vectoridau/remote-i2c",
     packages=setuptools.find_packages(),
+    install_requires=['smbus2>=0.1.5'],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "License :: OSI Approved :: MIT License",
