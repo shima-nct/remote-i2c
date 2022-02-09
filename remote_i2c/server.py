@@ -19,7 +19,7 @@ class RemoteI2CServer:
         self._on_client = func
     
     def serve(self):
-        bus = SMBus(1)
+        bus = SMBus(self._i2c_bus_number)
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server.bind((self._host, self._port))
         server.listen(1)
